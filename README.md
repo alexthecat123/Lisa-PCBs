@@ -3,10 +3,10 @@ Some Apple Lisa PCBs that I've reverse-engineered.
 
 
 # Introduction
-Over the past few months, I've been reverse-engineering some of the PCBs in the Lisa as a fun project to both help people replace corrosion-damaged boards relatively inexpensively and to allow people to build their own Lisa expansion cards without having to track down and pay for the originals. The results of this project are these Gerber files for the Lisa 2/5 motherboard (one of the components that's most likely to be destroyed by corrosion) and the 2-port parallel card (because it's the most interesting and useful expansion card, at least in my opinion, with the Sun SCSI card coming in at a close second). One of my biggest goals with this project is to make the replicas as accurate to the originals as possible, and I think I did a pretty good job with that! See the discrepancies section below for a list of ways in which my boards deviate from the originals if you care about that sort of thing. A SCSI card is also in the works, but it's still a work in progress because I'm having to redesign it around a GAL in order to avoid infringing upon the IP of the original Sun card (which is apparently still owned by someone).
+Over the past few months, I've been reverse-engineering some of the PCBs in the Lisa as a fun project to both help people replace corrosion-damaged boards relatively inexpensively and to allow people to build their own Lisa expansion cards without having to track down and pay for the originals. The results of this project are these Gerber files for the Lisa 2/5 motherboard (one of the components that's most likely to be destroyed by corrosion) and the 2-port parallel card (because it's the most interesting and useful expansion card, at least in my opinion, with the Sun SCSI card coming in at a close second). One of my biggest goals with this project is to make the replicas as accurate to the originals as possible, and I think I did a pretty good job with that! See the discrepancies section below for a list of ways in which my boards deviate from the originals if you care about that sort of thing. I've also created a custom GAL-based SCSI card for the Lisa that allows you to reprogram the ROM without removing it from the Lisa, which you can find [here](https://github.com/alexthecat123/Lisa-GALSCSI-Card) if you're interested.
 
 # Pictures!
-Here are some photos of the motherboard and parallel card, both bare and assembled. <br>
+Here are some photos of the boards, both bare and assembled. Note that the motherboard and parallel card pictures are from an older revision where the silkscreen fonts don't quite match the original boards; rest assured that the Gerbers in this repository are up to date with the correct font. <br>
 <br>
 ![Bare_Motherboard_Top](https://user-images.githubusercontent.com/16897189/172883206-cae6abd1-e042-4164-8e29-cb9d3971ee05.png)
 ![Bare_Motherboard_Bottom](https://user-images.githubusercontent.com/16897189/172883244-cdb3ae1a-2ab9-4931-873c-7d40a472ed55.png)
@@ -50,8 +50,10 @@ Most parts can be found in [this DigiKey cart](https://www.digikey.com/short/01c
 ## Motherboard
 - The original board is 4 layers, but my replica is only 2 layers. I decided to do this because, while it makes the board feel a little less authentic, it decreases manufacturing costs by a pretty significant amount.
 - Because my board is only 2 layers, I couldn't completely match the trace layout of the original board, so I just decided to autoroute all of the traces. So the trace layout is very different from that of the original.
-- The silkscreen font isn't quite right. I couldn't find the original font that Apple used on these boards, so I settled with the closest one I could find. This causes some of the characters to look a little different, but the most noticable feature (although you probably wouldn't notice it unless you have an original board and one of my boards sitting side by side) is that, for any given font height, the width of the characters in the Apple font is slightly greater than their width in my font. If anyone knows what the original font was, be sure to let me know!
 - If you don't choose the "Gold Fingers" option when fabricating your boards, the edge connectors will be silver instead of gold like the originals.
 ## Parallel Card
-- As mentioned above with the motherboard, the silkscreen font isn't quite the same as the original Apple font.
-- And once again, the edge connector fingers won't be gold plated like the originals unless you select "Gold Fingers" when fabricating your boards.
+- Once again, the edge connector fingers won't be gold plated like the originals unless you select "Gold Fingers" when fabricating your boards.
+
+# Changelog
+- 6/8/22  - Initial release of motherboard and parallel card.
+- 10/2/22 - Updated the fonts on the motherboard and parallel card to match the original boards' fonts. Also increased the size of the Apple logos and added the "13" silkscreen to the upper port of the parallel card to make the boards a little more accurate to the originals.
