@@ -62,6 +62,7 @@ Most parts can be found in [this DigiKey cart](https://www.digikey.com/short/01c
 # Assembly Notes
 
 ## I/O Board
+- All of the bodge wires are integrated into this design, so you don't have to worry about any of that!
 - The I/O board is by far the most complicated to assemble out of these three boards. Most of the parts are pretty self-explanatory; just follow the EasyEDA schematic to make sure that you're installing everything in the right places. There are, however, quite a few confusing parts that I need to go over. And who knows, there might be a few notes that I'm completely forgetting about, so send me an email if you're ever confused about something.
 - Substitute the 2SA1859 transistor for the MPS-U51s at Q3 and Q6. Also, substitute the 2SC4883 for the MPS-U01 at Q4. When installing these transistors, ensure that the side of the transistor with the part number written on it is facing towards the top of the board. Also, the pinouts of these transistors are different than those of the originals, so cross the center and right leads when installing them.
 - The 2114 RAM chips should be installed in place of the 444C-3 chips at U1B and U2B.
