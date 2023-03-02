@@ -48,10 +48,10 @@ Pretty much all of the non-IC parts can be found in [this DigiKey cart](https://
 - 1x 4011B
 - 2x 2N4258 <br>
 
-And of course, the COP and the PROM at U4B will need to be taken from your old I/O board because they're custom chips.
+The COP and the PROM at U4B can be most easily procured by stealing them from your old nonfunctional I/O board, but there are some other options too if you don't feel like doing that or if they're defective. The PROM is a 6309, so you can just buy one of those or an equivalent and burn it with the ROM image found [here on Bitsavers](http://bitsavers.trailing-edge.com/bits/Apple/Lisa/firmware/342-0172A_IO_28L22_U48.BIN). The COP can be replaced with [this neat adapter designed by Patrick Schafer](http://john.ccac.rwth-aachen.de:8000/patrick/COPSreader.htm#emulator) that allows you to use a COP402 or the KR1820VE1A Russian equivalent along with an external ROM to emulate the original COP.
 
 ## Motherboard
-Most parts can be found in [this DigiKey cart](https://www.digikey.com/short/01c3fd9f), with the exception of the video output jack and the expansion slot connectors. I haven't been able to find any modern sources for these parts (I guess they were custom-made for Apple back in the 1980s), so you'll either have to omit these parts or scavenge them off a broken Lisa motherboard if you want to include them. Note that the motherboard will work fine without these parts; you just won't be able to use the composite video output or connect any expansion cards.
+Most parts can be found in [this DigiKey cart](https://www.digikey.com/short/01c3fd9f), with the exception of the video output jack and the expansion slot connectors. The expansion slot connectors appear to be a custom Apple design, so we'll probably never be able to find a modern replacement for those, but there might be some hope for the video jack. Looking on Digikey, [this](https://www.digikey.co.uk/en/products/detail/keystone-electronics/902/317243) appears to be the correct part, but it seems like you have to get a quote from the manufacturer in order to get one. That's more effort than I would want to put in, but if you really want a video jack, that could be an option. Note that the motherboard will work fine without these parts; you just won't be able to use the composite video output or connect any expansion cards.
 
 ## Parallel Card
 - Once again, most of the parts can be found in [this cart](https://www.digikey.com/short/vz0jdzf3), with three exceptions: the 74LS280s, the 6522s, and the EPROM.
@@ -103,3 +103,4 @@ Most parts can be found in [this DigiKey cart](https://www.digikey.com/short/01c
 - 6/8/22  - Initial release of motherboard and parallel card.
 - 10/2/22 - Updated the fonts on the motherboard and parallel card to match the original boards' fonts. Also increased the size of the Apple logos and added the "13" silkscreen to the upper port of the parallel card to make the boards a little more accurate to the originals.
 - 10/13/22 - Initial release of the 2/5 I/O board.
+- 3/2/23 - Updated the readme to provide alternatives to stealing the COP, floppy controller PROM, and video output jack from your old boards.
