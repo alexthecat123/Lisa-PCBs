@@ -85,6 +85,9 @@ Most parts can be found in [this DigiKey cart](https://www.digikey.com/short/01c
 - All of the unmarked holes around the mouse port on the motherboard are for the 0.01uF capacitors (see the third page of the schematic). I don't know why Apple only chose to put a silkscreen around one of those capacitors, but they did, so I did the same in my replica.
 - You'll need to burn [this firmware](http://bitsavers.trailing-edge.com/bits/Apple/Lisa/firmware/341-0193-A.BIN) into your 2716 or 2732 before using the parallel card. I use a TL866 programmer for this task, but any EPROM programmer should work fine. Note that you need to duplicate the ROM contents if you're using a 2732 so that it fills up the entire 4K of the chip (just open the firmware in a hex editor, copy everything, and then paste it at the end of the file).
 
+## 3D-Printed Motherboard Mount
+If you're building yourself a DIY Lisa and don't have a motherboard tray for your motherboard, download and 3D-print the STL file in the 3D folder to make a nice little stand for your Lisa. It even has mounting holes for an RGBtoHDMI! Thanks to Andrew Diller for designing this!
+
 # Discrepancies From Actual Boards
 ## I/O Board
 - I haven't tested any of the battery circuitry, so I'm not sure if it actually works. But the rest of the board works just fine, so chances are the battery stuff does too.
@@ -105,3 +108,4 @@ Most parts can be found in [this DigiKey cart](https://www.digikey.com/short/01c
 - 10/13/22 - Initial release of the 2/5 I/O board.
 - 3/2/23 - Updated the readme to provide alternatives to stealing the COP, floppy controller PROM, and video output jack from your old boards.
 - 8/2/23 - It turns out that I was dumb and I somehow reversed the two RAM slot footprints on the motherboard. So the slot labeled MEM 1 was actually addressed by the CPU board as if it was MEM 2 and vice versa. This didn't affect normal functionality, but it did cause the Lisa to report the wrong board being bad in the event of a memory error. Thanks to DosFox for finally discovering this issue and letting me know so that I could fix it!
+- 1/5/25 - Added STL files for a 3D-printed 2/5 motherboard holder. Thanks to Andrew Diller for designing it and submitting a pull request!
