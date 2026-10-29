@@ -55,7 +55,7 @@ Most parts can be found in [this DigiKey cart](https://www.digikey.com/short/01c
 
 ## Parallel Card
 - Once again, most of the parts can be found in [this cart](https://www.digikey.com/short/vz0jdzf3), with three exceptions: the 74LS280s, the 6522s, and the EPROM.
-- The two 74LS280s can be bought [from eBay](https://www.ebay.com/itm/152030375380?hash=item2365b76dd4:g:CXUAAOSwMj9gB0MT) and the two 6522s can also be bought from eBay, but the prices might be better if you get them [from Mouser instead](https://www.mouser.com/ProductDetail/Western-Design-Center-WDC/W65C22N6TPG-14?qs=opBjA1TV901DbgJ9rfcBoQ%3D%3D). If you get a WDC65C22 instead of a "real" 6522, make sure to get the N variant, not the S variant; the S variant uses totem pole outputs on the IRQB pin and won't work!
+- The two 74LS280s can be bought [from eBay](https://www.ebay.com/itm/152030375380?hash=item2365b76dd4:g:CXUAAOSwMj9gB0MT) and the two 6522s can also be bought from eBay.
 - If you want to save some money, you can omit all of the sockets on the DigiKey list, although this is not recommended because it makes it a huge pain to remove/replace chips in the future.
 - You can use a [2716](https://www.jameco.com/z/2716-1-Major-Brands-IC-2716-1-EPROM-16K-Bit-350ns-NMOS-UV-Erasable-and-Electrically-Programmable-EPROM_40011.html) or [2732](https://www.jameco.com/z/2732-Major-Brands-IC-2732-EPROM-32K-Bit-450ns-NMOS-UV-Erasable-and-Electrically-Programmable-EPROM_40096.html) EPROM with the parallel card. It doesn't matter which one you use (the original used a 2716), but you'll need to duplicate the contents of the ROM if you use a 2732 in order to ensure that you fill up the entire contents of the EPROM.
 
@@ -111,3 +111,4 @@ If you're building yourself a DIY Lisa and don't have a motherboard tray for you
 - 1/5/25 - Added STL files for a 3D-printed 2/5 motherboard holder. Thanks to Andrew Diller for designing it and submitting a pull request!
 - 3/15/25 - Renamed files to get rid of colons in filenames. The colons were preventing someone from cloning the repo, and I have no idea how they got there to begin with!
 - 9/29/25 - Fixed a mistake on the motherboard schematic and DigiKey list where a 0.1uF cap was mislabeled as 240uF. Also added a link to the motherboard video jack on Mouser.
+- 10/29/2026 - Removed references to the WDC65C22 VIA from the readme; some people have emailed me and told me that surprisingly even the N variant doesn't work.
