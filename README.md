@@ -112,3 +112,4 @@ If you're building yourself a DIY Lisa and don't have a motherboard tray for you
 - 3/15/25 - Renamed files to get rid of colons in filenames. The colons were preventing someone from cloning the repo, and I have no idea how they got there to begin with!
 - 9/29/25 - Fixed a mistake on the motherboard schematic and DigiKey list where a 0.1uF cap was mislabeled as 240uF. Also added a link to the motherboard video jack on Mouser.
 - 10/29/2026 - Removed references to the WDC65C22 VIA from the readme; some people have emailed me and told me that surprisingly even the N variant doesn't work.
+- 11/2/2026 - Updated the readme and I/O board DigiKey BOM to replace the MPS-U01 and MPS-U51 transistor substitutions with better, cheaper, and more modern alternatives that don't require you to cross the legs over each other like the previous suggestions did.
